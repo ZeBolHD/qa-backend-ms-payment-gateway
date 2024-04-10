@@ -7,9 +7,11 @@ import { AuthModule } from "@auth/auth.module";
 import { APP_GUARD } from "@nestjs/core";
 import { JwtAuthGuard } from "@auth/guards/jwt-auth.guard";
 import { ConfigModule, ConfigService } from "@nestjs/config";
+import { LoggerModule } from "nestjs-pino";
 
 @Module({
   imports: [
+    LoggerModule.forRoot(),
     ClientsModule.registerAsync([
       {
         name: "CARD_CHECKER_SERVICE",
