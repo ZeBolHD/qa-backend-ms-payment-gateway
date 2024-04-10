@@ -20,7 +20,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle("Payment api")
     .setDescription("This api for payment gateway")
-    .setVersion("1.00")
+    .setVersion("1.01")
     .setExternalDoc("Коллекция json", "/swagger-json")
     .addBearerAuth()
     .build();
