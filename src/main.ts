@@ -11,7 +11,7 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService);
 
-  const HOST = configService.get<string>("HOST_AUTH_URL");
+  const HOST = configService.get<string>("HOST_PAYMENT_URL");
 
   app.useLogger(app.get(Logger));
 
@@ -23,8 +23,8 @@ async function bootstrap() {
   app.use(cookieParser());
 
   const config = new DocumentBuilder()
-    .setTitle("Payment api")
-    .setDescription("This api for payment gateway")
+    .setTitle("Payment API")
+    .setDescription("This API for payment gateway")
     .setVersion("1.01.1")
     .addServer(HOST, "API server")
     .addBearerAuth()
