@@ -14,7 +14,7 @@ spec:
     metadata:
       labels:
         app: backend-ms-payment-gateway
-        version: "1.01"
+        version: "1.01.1"
     spec:
       containers:
         - name: backend-ms-payment-gateway
