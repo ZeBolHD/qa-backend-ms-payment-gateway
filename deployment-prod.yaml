@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: backend-ms-payment-gateway
-          image: registry.dev-cinescope.store/qa-backend-ms-payment-gateway:latest
+          image: zebolhd/qa-backend-ms-payment-gateway:latest
           resources:
             requests:
               memory: "100Mi"
@@ -34,9 +34,6 @@ spec:
                 name: qa-secret
           ports:
             - containerPort: 5800
-      imagePullSecrets:
-        - name: regcred
-
 ---
 apiVersion: v1
 kind: Service
